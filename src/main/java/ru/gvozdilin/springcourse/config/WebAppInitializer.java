@@ -20,7 +20,13 @@ public class WebAppInitializer implements WebApplicationInitializer {
 
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(context));
          dispatcher.setLoadOnStartup(1);
-        dispatcher.addMapping("/");
+        dispatcher.addMapping("/hello");
+        dispatcher.addMapping("/users");
+        dispatcher.addMapping("/remittance");
+        dispatcher.addMapping("/add_user");
+        dispatcher.addMapping("/delete_user");
+        dispatcher.addMapping("/gotoremittance");
+        dispatcher.addMapping("/gotohello");
       }
 
 

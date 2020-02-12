@@ -18,4 +18,24 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userDao.findAll();
     }
+
+    public void updateBalance(Integer userId, Integer diff) {
+        userDao.updateBalance(userId, diff);
+    }
+
+
+
+    public void remittance(Integer userId1, Integer userId2, int value){
+         userDao.remittance(userId1, userId2, value);
+    }
+
+
+   public void addUser(String username){
+        userDao.addUser(username);
+   }
+
+    @Override
+    public void deleteUser(Integer id) {
+        userDao.deleteUser(id);
+    }
 }
